@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Filmes</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="/">Início</a>
+        <a href="/filmes">Filmes</a>
+        <a href="/contato">Contato</a>
+    </nav>
+
+    <h1>Informações sobre os Filmes</h1>
+    
+    <% lista.forEach(function(filme) { %>
+        <div class="conteudo">
+            <h3><%= filme.titulo %></h3>
+            <p>Gênero: <%= filme.genero %></p>
+            <a href="/filmes/<%= filme.id %>" class="botao">Detalhes</a>
+        </div>
+    <% }); %>
+
+</body>
+</html>
